@@ -94,3 +94,7 @@ State should be initiated only in the constructor.
 
 >> lifecycle hook  <<
 Render is one of the lifecyclehook
+
+---------- Text Input ------------
+
+Component Initial State would be done in the constructor

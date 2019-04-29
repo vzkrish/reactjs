@@ -9,7 +9,7 @@ export default class Grid extends React.Component
         for (let i=1; i<10; i++) {
             users.push({
                 id: i,
-                username: 'Murthy ' + i,
+                username: 'Krish ' + i,
                 job: 'Employee ' + i,
             });
         }

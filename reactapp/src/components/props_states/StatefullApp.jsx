@@ -31,7 +31,7 @@ class StatefulApp extends React.Component {
     render()
     {
         return(
-            <div className="container">
+            <div >
             <Message data="ACSS grabbed new React Project"/>
             <h3 className="b-">Developers Enrolled            </h3>
             <table className='table table-hover table-striped'>
