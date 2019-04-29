@@ -60,3 +60,20 @@ export >> As we created a component to allow other to use
 Props Concenpt > Passing properties to functions > Values can be passed from one compoent to other component
 State > Can only be passed with in the same component. Also called as internal.
 
+
+defaultProps Is used to take default property value when the importer misses to pass on the Props
+
+
+Property binding, we can pass state using the property.
+
+On redux contianer/Intelligent component or presentation component.
+=====================================================
+
+Container Component is intelligent these are the actual ones get the component 
+
+{} are put for instanciate. 
+
+Container is allways given as default. 
+Manatory we have to override a render component. 
+
+
