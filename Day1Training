@@ -15,3 +15,48 @@ Diffing and Recon
 Youtube Tree
 
 
+React Fiber Engine is that React say for the smooth rotation.
+
+================= Post Tea Break ====================
+
+Creating a tree
+
+Module dynamically adding and removing. 
+
+Declarative Function. 
+Anonymous functions or also called callback functions
+var sum = function(x,y)
+{
+ret x+y
+}
+
+EA6:
+
+class greet extent React.component.
+
+Project Structure: 
+
+
+Import and Export variables in the the
+
+All components have to be 
+
+
+=================================================
+
+Creating a component: 
+
+Createa  folder components. 
+
+Add Footer.js and in that we have to start with import react component.
+
+import React from 'react'
+
+
+Keyword const. >> To say we cannot reassign this component. 
+export >> As we created a component to allow other to use
+
+
+Props Concenpt > Passing properties to functions > Values can be passed from one compoent to other component
+State > Can only be passed with in the same component. Also called as internal.
+
