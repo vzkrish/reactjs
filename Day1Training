@@ -2,6 +2,9 @@ Day 1 Training
 
 HTML 5 + CSS 5 +  JS/TS = Single Page Application
 
-HTML 5 + CSS 5 +  JS/TS = Single Page Application
-HTML 5 + CSS 5 +  JS/TS = Single Page Application
+Virtual DOM: 
+
+Coponent = View + class (control)
+
+Diffing and reconsolidation algoritham
 
