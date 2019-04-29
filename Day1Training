@@ -98,3 +98,27 @@ Render is one of the lifecyclehook
 ---------- Text Input ------------
 
 Component Initial State would be done in the constructor
+
+
+Component Tree, DOM Tree, Virtual DOM Tree 
+
+i.e if you just create a Input and if you dont give the render it wont work as the state we are not changing.
+
+============================== After Tea Break =======================================
+
+>>>>>>>>>>> React Dev Tool <<<<<<<<<<<<<<< For React Debugging
+
+Add breakpoint and can do debug
+
+
+Code in the State less simple function:
+
+const ContentSibling = (props) => {
+    return(
+        <div>
+            <h4>{props.data}</h4>
+        </div>
+    )
+}
+
+

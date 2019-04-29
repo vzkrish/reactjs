@@ -29,7 +29,7 @@ export default class Grid extends React.Component
                 <tbody>
                     {users.map((user, index) => {
                         return(
-                            <tr key={user.id} className="info">
+                            <tr key={user.id} >
                                 <td>#{user.id}</td>
                                 <td>{user.username}</td>
                                 <td>{user.job}</td>
@@ -39,7 +39,7 @@ export default class Grid extends React.Component
                                     </a>
                                 </td>
                                 <td>
-                                    <button data-id={user.id}>Delete</button>
+                                    <button type="button" className="btn-primary" data-id={user.id}>Delete</button>
                                 </td>
                             </tr>
                         );

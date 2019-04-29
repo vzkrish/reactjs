@@ -6,14 +6,24 @@ import {Footer} from './components/Footer'
 import {Login} from './components/Login'
 import Dashboard from './components/Dashboard'
 
+
+    
+
 function App() {
   return (
     <div className="App">
-      <header className="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-inverse"></nav>
+    <div class="container-fluid">
+      
+    <div class="navbar-header">
+      
+    </div>
+      <header className="navbar navbar-dark bg-dark -sm">
         <img src={logo} width = "100" height="100" className="App-logo" alt="logo" />
-          Learn React
+        <Header title = "Krish React SPA Project"/>
       </header>
-      <Header title = "Krish React SPA Project"/>
+      </div>
+      
       <Dashboard></Dashboard>
       <Login portal="Verizon"/>
       <Footer year="@2019"/>
