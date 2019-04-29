@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import StatefulApp from "./props_states/StatefullApp"
 
 
 // import {MyComponent} from './LodableComponent'
@@ -13,8 +14,10 @@ export default class Dashboard extends Component{
     render() {
         return (
             <div>
+                <StatefulApp/>
                 <h3>Put your Business Components Tree Here</h3>
             </div>    
+            
         )
 
     }

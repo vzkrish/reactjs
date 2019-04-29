@@ -77,3 +77,20 @@ Container is allways given as default.
 Manatory we have to override a render component. 
 
 
+========================================Post Lunch Session ==========================================================
+
+D.I.R.T Application
+Date Intense Techonology
+
+Fat arrow notation 
+
+Code Extension for React
+Super extentions :: React Redux ES6 Snippets :::
+
+
+> related components put in on file
+
+State should be initiated only in the constructor. 
+
+>> lifecycle hook  <<
+Render is one of the lifecyclehook
