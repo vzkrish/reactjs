@@ -1,5 +1,6 @@
 import React from 'react'
 import {Message} from './Message'
+import Grid from "./Grid"
 
 class StatefulApp extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class StatefulApp extends React.Component {
     render()
     {
         return(
-            <div>
+            <div className="container">
             <Message data="ACSS grabbed new React Project"/>
             <h3 className="b-">Developers Enrolled            </h3>
             <table className='table table-hover table-striped'>
@@ -40,6 +41,7 @@ class StatefulApp extends React.Component {
                     }
                  </tbody>
             </table>
+            <Grid />
             </div>
         );
     }
@@ -55,6 +57,8 @@ const TableRow = (props)=>{
         </tr>
     )
 }
+
+
 
 export default StatefulApp;
 
