@@ -4,6 +4,7 @@ import Textinput from "./props_states/Textinput"
 import ChildParentinvoke from "./parent-child/ChildParentinvoke"
 import RefsDemo from "./parent-child/RefsDemo"
 import Context from './context_api/Context';
+import CompLifeCycle from "./lifecycle_hooks/CompLifeCycle"
 
 
 // import {MyComponent} from './LodableComponent'
@@ -25,7 +26,9 @@ export default class Dashboard extends Component{
                 <ChildParentinvoke></ChildParentinvoke> */}
                 {/* <RefsDemo></RefsDemo>  */}
                 <Context></Context>
-                
+                <CompLifeCycle></CompLifeCycle>
+
+
                 </div>    
             
         )
