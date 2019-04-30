@@ -3,6 +3,7 @@ import StatefulApp from "./props_states/StatefullApp"
 import Textinput from "./props_states/Textinput"
 import ChildParentinvoke from "./parent-child/ChildParentinvoke"
 import RefsDemo from "./parent-child/RefsDemo"
+import Context from './context_api/Context';
 
 
 // import {MyComponent} from './LodableComponent'
@@ -16,17 +17,17 @@ export default class Dashboard extends Component{
 
     render() {
         return (
-            <form>
+            
             <div className="container" >
                 {/* <StatefulApp/> */}
                 {/* <h3>Put your Business Components Tree Here</h3> */}
                 {/* <Textinput className="input-group"/>
                 <ChildParentinvoke></ChildParentinvoke> */}
-                <RefsDemo></RefsDemo> 
-                
+                {/* <RefsDemo></RefsDemo>  */}
+                <Context></Context>
                 
                 </div>    
-            </form>
+            
         )
 
     }

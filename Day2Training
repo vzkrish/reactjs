@@ -1,0 +1,64 @@
+========= Day 2 Training ===============
+> Talked about previous day revision. 
+
+Context API Demo: 
+
+
+Props work only between parent and child. 
+
+Without Redux if we have to use global data then we can use with Context.
+
+Steps for creating and using a context in React 
+
+// Create the Context
+const MyContext = React.createContext();
+
+Two Roles for a context Provider & Consumer. Consumers can be many.
+
+
+//2 Create Provider Component
+class MyProvider extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            name:'Krishnam',
+            salary:10000, 
+            job:'Engineer'
+        }
+    }
+
+    render(){
+        return(
+            <MyContext.Provider value={{
+                // Context Data
+                state:this.state,
+                //Function
+                incrementSalary: () => this.setState({
+                    salary: this.state.salary + 1000
+                })
+            }}>
+            {this.props.children}
+            </MyContext.Provider>
+        );
+    }
+}
+
+
+//3 Wrap main app into Myprovider to access the context
+export default class Context extends React.Component{
+    render(){
+        return(
+            <MyProvider>
+                <div className="bg-success">
+                <h2 className="bg-info">Krish React Context API Demo </h2>
+
+                <Family/>
+                </div>
+            </MyProvider>
+        )
+    }
+}
+
+
+Questions : 
+Security for Rest using React
