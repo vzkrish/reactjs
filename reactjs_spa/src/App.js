@@ -1,61 +1,63 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Route,Link,Switch} from 'react-router-dom'
+
+import { Layout } from './components/Layout';
+import Heading from './components/Heading';
+import Footer from './components/Footer';
+import {Home} from "./components/Home"
+import {Customers} from "./components/Customers"
+import {Login} from "./components/Login"
+import Cars from "./components/Cars"
+import CarsDetails from "./components/CarDetails"
+import {Greet} from "./components/Greet"
+
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-
-{/* <nav className="navbar navbar-inverse">
-  <div className="container-fluid">
-    <div className="navbar-header">
-      
-      <img src={logo} className="App-logo" height ="75" width = "75" alt="logo" />
-      
-    </div>
-    <ul className="nav navbar-nav">
-      <li className="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav> */}
 <br/>
-
+{/* <Heading></Heading> */}
 <nav className="navbar navbar-inverse">
   <div className="container-fluid">
     <div className="navbar-header">
     <img src={logo} className="App-logo" height ="75" width = "75" alt="logo" />
     </div>
     <ul className="nav navbar-nav">
-      <li className="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li className="active"><Link href="#">Home</Link></li>
+      <li><Link exact to ='/users'>Customers</Link></li>
+      <li><Link exact to ='/cars'>Cars</Link></li>
+      <li><Link exact to ='/greet/Krish'>Greet</Link></li>
     </ul>
     <ul className="nav navbar-nav navbar-right">
-      <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><Link exact to ='/singup'><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
+      <li><Link exact to ='/login'><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
     </ul>
   </div>
 </nav>
+<main className="Mycontainer">
+<Switch>
+  <Route path="/" exact component={Home} />
+  <Route path="/users" component={Customers} />
+  <Route path="/login"  component={Login} />
+  <Route path="/cars"  component={Cars} />
+  <Route path="/carDetails/:carId" component={CarsDetails} />
+  <Route path="/greet/:username" render={(props) => (<Greet{...props}/>)} /> 
+   <Route component={NotFound}/> 
+</Switch>
+</main>
+
+
+<Layout></Layout>
+<Footer></Footer>
+
 
     </div>
   );
 }
 
+const NotFound = () => <h1>Sorry.. </h1>
+
 export default App;
+
