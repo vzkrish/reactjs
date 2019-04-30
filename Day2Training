@@ -16,7 +16,7 @@ const MyContext = React.createContext();
 Two Roles for a context Provider & Consumer. Consumers can be many.
 
 
-//2 Create Provider Component
+>>>>>>>> //2 Create Provider Component<<<<<<<<<<<<
 class MyProvider extends React.Component{
     constructor(props){
         super(props);
@@ -44,7 +44,7 @@ class MyProvider extends React.Component{
 }
 
 
-//3 Wrap main app into Myprovider to access the context
+>>>>>> //3 Wrap main app into Myprovider to access the context <<<<<<<
 export default class Context extends React.Component{
     render(){
         return(
@@ -58,6 +58,22 @@ export default class Context extends React.Component{
         )
     }
 }
+================================= Post Tea Break ==========================
+
+Four Phases of a React Component: 
+
+1. Initialization
+2. Mouting
+3. Update
+4. Unmounting
+
+
+
+
+====================================Post Lunch ===============================================
+
+
+
 
 
 Questions : 

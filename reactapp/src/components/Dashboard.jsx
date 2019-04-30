@@ -5,7 +5,7 @@ import ChildParentinvoke from "./parent-child/ChildParentinvoke"
 import RefsDemo from "./parent-child/RefsDemo"
 import Context from './context_api/Context';
 import CompLifeCycle from "./lifecycle_hooks/CompLifeCycle"
-
+import WeatherComponent from "./lifecycle_hooks/WeatherComponent"
 
 // import {MyComponent} from './LodableComponent'
 // Stateful Functional Component
@@ -27,7 +27,9 @@ export default class Dashboard extends Component{
                 {/* <RefsDemo></RefsDemo>  */}
                 <Context></Context>
                 <CompLifeCycle></CompLifeCycle>
-
+                 <br/>
+                 <br/>
+                 <WeatherComponent></WeatherComponent>   
 
                 </div>    
             
