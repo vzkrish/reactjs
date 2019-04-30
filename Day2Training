@@ -73,7 +73,14 @@ Four Phases of a React Component:
 ====================================Post Lunch ===============================================
 
 
+Weather Program using Ajax and calling on didhappen. 
 
+> New project created for react SPA
+
+
+Install SPA 
+
+npm install react-router-dom --save
 
 
 Questions : 
