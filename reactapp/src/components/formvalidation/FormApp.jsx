@@ -82,7 +82,7 @@ export default class FormApp extends Component {
       </form>
  */
 <div>
-<div class="container pt-3">
+<div class="container pt-3 ">
   <div class="row justify-content-sm-center">
     <div class="col-sm-6 col-md-4">
 
