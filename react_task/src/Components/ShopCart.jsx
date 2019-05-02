@@ -5,9 +5,10 @@ export default class ShopCart extends React.Component{
         super(props)
         this.state={inputText:'1'}
         const sampUser = [];
-        sampUser.push({ id: Math.random(),
+        sampUser.push({ id: 100,
                 name: "Apples",
                 prodDesc: "Apples are very good for health, best recommended for health",
+                qty:1,
                 price: 1.99
             });
         
@@ -19,17 +20,29 @@ export default class ShopCart extends React.Component{
         console.log(props)
         const newelement = this.state.users;  
         newelement.push( {
-            id: 101,
-            name: "Grapes",
+            id: Math.random(),
+            name: "Grapes" + Math.random(),
             prodDesc: "Grapes are very good for health, best recommended for health",
+            qty:1,
             price: 2.99
         });
 
         this.setState({users:newelement});
     }
 
+    removeProduct(prodId)
+    {
+        const newelement = this.state.users;  
+        console.log(prodId)
+        const index = newelement.findIndex(user => user.id === prodId);
+        newelement.splice(index,1)
+        console.log(newelement)
+        this.setState({users:newelement});
+    }
+
     handleChangeEvent(event){
-        console.log(event.target.value)
+        console.log("Hanl")
+        //console.log("ID: "+id)
         this.setState({
             inputText:event.target.value
         })
@@ -76,13 +89,13 @@ export default class ShopCart extends React.Component{
 							<td data-th="Price">{user.price}</td>
 							<td data-th="Quantity">
 								<input type="number" className="form-control text-center"  
-                                value={this.state.inputText} 
+                                value={user.qty} 
                                 onChange={this.handleChangeEvent.bind(this)}/>
 							</td>
-							<td data-th="Subtotal" className="text-center"><TextDisplay text={this.state.inputText}></TextDisplay></td>
+							<td data-th="Subtotal" className="text-center">{user.qty * user.price}</td>
 							<td className="actions" data-th="">
 								<button className="btn btn-info btn-sm"><i className="fa fa-refresh"></i></button>
-								<button className="btn btn-danger btn-sm"><i className="fa fa-trash-o"></i></button>								
+								<button className="btn btn-danger btn-sm" onClick={() => this.removeProduct(user.id)}><i className="fa fa-trash-o"></i></button>								
 							</td>
 						</tr>
                                              );
