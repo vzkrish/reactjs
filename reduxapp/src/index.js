@@ -1,10 +1,10 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
+//import React from 'react';
+import ReactDOM from 'react-dom';
 // import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
+//import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+
 
 // // If you want your app to work offline and load faster, you can change
 // // unregister() to register() below. Note this comes with some pitfalls.
@@ -46,7 +46,7 @@ store.dispatch({type:"DEC", payload:500})
 */
 
 //Level3 : Combined Reducers with debugging u sing Redux Dev tool
-
+/* 
 import {combineReducers,applyMiddleware,createStore} from 'redux'
 import logger from 'redux-logger'
 
@@ -80,4 +80,60 @@ store.subscribe(() =>{console.log("Store Changed:",store.getState)});
 
 store.dispatch({type:'CHANGE_NAME',payload:"Krish"})
 store.dispatch({type:'CHANGE_AGE',payload:36})
-store.dispatch({type:'CHANGE_NAME',payload:"Krisnam"})
+store.dispatch({type:'CHANGE_NAME',payload:"Krisnam"}) */
+
+import {composeWithDevTools} from "redux-devtools-extension"
+import {applyMiddleware,createStore} from "redux"
+import logger from 'redux-logger';
+import thunk from "redux-thunk"
+
+import axios from "axios"
+import React from 'react'
+
+// State Tree
+const initialState={
+    fetching:false,
+    fetched:false, 
+    user:[],
+    error:null
+}
+
+let storeusers = []
+const reducer=(state=initialState,action) =>{
+    switch(action.type){
+        case "FETCH_USERS_START":{
+            return {...state,fetching:true}
+        }
+        case "FETCH_USERS_ERROR":{
+            return {...state,fetching:false,error:action.payload}
+        }
+        case "RECEIVE_USERS":{
+            return {...state,fetching:false,fetched:true,users:action.payload}
+        }
+
+    }
+   return state; 
+}
+
+const middleware = applyMiddleware(thunk,logger);
+const store=createStore(reducer,composeWithDevTools(middleware));
+
+store.dispatch((dispatch) =>{
+    dispatch({type:"FETCH_USERS_START"})
+
+    axios.get("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {dispatch({type:"RECEIVE_USERS",payload:response.data})})
+    .catch((error) => {dispatch({type:"FETCH_USERS_ERROR",payload:error})})
+}
+)
+
+
+store.subscribe(() => {
+    console.log("Store Changed :", store.getState().users)
+    
+    storeusers = store.getState().users
+    console.log("Assigning")
+    console.log(storeusers)
+    
+})
+
