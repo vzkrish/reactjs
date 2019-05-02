@@ -12,7 +12,10 @@
 // serviceWorker.unregister();
 
 
-import {createStore} from "redux"
+
+/*  Redux Training 
+import {applyMiddleware,createStore} from "redux"
+import logger from "redux-logger"
 
 const reducer = function(state, action){
     console.log(state, action)
@@ -25,8 +28,9 @@ const reducer = function(state, action){
     return state;
 }
 
+const middleware=applyMiddleware(logger)
 //Create Store and attaching to reducer with initial state
-const store = createStore(reducer, 1);
+const store = createStore(reducer, 1,middleware);
 
 //subscribe you store to get new state
 store.subscribe(() => {
@@ -38,3 +42,42 @@ store.dispatch({type:"INC", payload:100})
 store.dispatch({type:"INC", payload:10000})
 store.dispatch({type:"DEC", payload:50})
 store.dispatch({type:"DEC", payload:500})
+
+*/
+
+//Level3 : Combined Reducers with debugging u sing Redux Dev tool
+
+import {combineReducers,applyMiddleware,createStore} from 'redux'
+import logger from 'redux-logger'
+
+import {composeWithDevTools} from "redux-devtools-extension"
+
+const userReducer = (state = {}, action) => {
+    switch(action.type){
+        case "CHANGE_NAME":{
+            return state = {...state,name:action.payload};
+        }
+        case "CHANGE_AGE":{
+            return state = {...state,age:action.payload};
+        }
+        
+    }
+    return state;
+}
+
+const tweetReducer=(state=[],action) =>{
+    return state;
+}
+
+const reducers=combineReducers({
+    user:userReducer,
+    tweets:tweetReducer
+})
+
+const store = createStore(reducers,composeWithDevTools(applyMiddleware(logger)));
+
+store.subscribe(() =>{console.log("Store Changed:",store.getState)});
+
+store.dispatch({type:'CHANGE_NAME',payload:"Krish"})
+store.dispatch({type:'CHANGE_AGE',payload:36})
+store.dispatch({type:'CHANGE_NAME',payload:"Krisnam"})
