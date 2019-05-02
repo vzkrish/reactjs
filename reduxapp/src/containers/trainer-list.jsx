@@ -6,10 +6,11 @@ import{selectTrainer} from '../actions/index'
 
 class TrainerList extends Component{
     createListItems(){
-        return this.props.trainers.map((trainer) =>{
+        console.log("My Test")
+        return this.props.trainers.map( (trainer) =>{
             return(
-                <div>
-                <h4 className="text-danger" key={trainer.id}
+                <div key={trainer.id}>
+                <h4 className="text-danger" 
                 onClick={() => this.props.st(trainer)}>
                 {trainer.first} {trainer.last}
                 </h4>
@@ -20,7 +21,7 @@ class TrainerList extends Component{
 render(){
     return(
         <div>
-            {this.createListItems}
+            {this.createListItems()}
         </div>
     )
 }
@@ -34,7 +35,8 @@ function mapStateToProps(state){
 }
 
 function matchDispatchToProps(dispatch){
-    return bindActionCreators({st:selectTrainer},dispatch;);
+    console.log("Step 0")
+    return bindActionCreators({st:selectTrainer},dispatch);
 }
 
 export default connect(mapStateToProps,matchDispatchToProps)(TrainerList)

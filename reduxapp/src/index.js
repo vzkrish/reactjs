@@ -1,8 +1,8 @@
 //import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 // import './index.css';
 //import App from './App';
-import * as serviceWorker from './serviceWorker';
+//import * as serviceWorker from './serviceWorker';
 
 
 
@@ -82,16 +82,16 @@ store.dispatch({type:'CHANGE_NAME',payload:"Krish"})
 store.dispatch({type:'CHANGE_AGE',payload:36})
 store.dispatch({type:'CHANGE_NAME',payload:"Krisnam"}) */
 
-import {composeWithDevTools} from "redux-devtools-extension"
-import {applyMiddleware,createStore} from "redux"
-import logger from 'redux-logger';
-import thunk from "redux-thunk"
+// import {composeWithDevTools} from "redux-devtools-extension"
+// import {applyMiddleware,createStore} from "redux"
+// import logger from 'redux-logger';
+// import thunk from "redux-thunk"
 
-import axios from "axios"
-import React from 'react'
+// import axios from "axios"
+// import React from 'react'
 
 // State Tree
-const initialState={
+/* const initialState={
     fetching:false,
     fetched:false, 
     user:[],
@@ -135,5 +135,35 @@ store.subscribe(() => {
     console.log("Assigning")
     console.log(storeusers)
     
-})
+}) */
+
+
+//=============================================
+// Post lunch glue React & Redux
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Provider} from 'react-redux'
+// npm install react-redux --save
+
+import {applyMiddleware,createStore} from 'redux'
+import "./index.css"
+import allReducers from './reducers/index'
+import App from './components/App'
+
+import logger from 'redux-logger'
+import {composeWithDevTools} from "redux-devtools-extension"
+
+const store = createStore(allReducers,composeWithDevTools(applyMiddleware(logger)));
+
+ReactDOM.render(
+    <Provider store={store}>
+    <App/>
+    </Provider>,
+    document.getElementById('root')
+);
+
+
+
+
 

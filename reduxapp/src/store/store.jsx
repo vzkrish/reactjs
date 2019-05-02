@@ -11,7 +11,7 @@ export default  [
         id: 2,
         first: "Anvi",
         last: "Sri",
-        age: 05,
+        age: 5,
         description: "C,C++,Java,J2EE,Spring Rest Services,Hibernate",
         thumbnail: "http://imgur.com/5fn3jRe.jpg"
     },
