@@ -1,4 +1,4 @@
-const styles = {
+const CommonStyles = {
     default : {
         backgroundColor: '#737373', 
         color: '#eae8e8', 
@@ -9,4 +9,4 @@ const styles = {
     }
 }
 
-export default styles;
+export default CommonStyles;
