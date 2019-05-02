@@ -20,9 +20,27 @@ Install the redux and save it
 
 1) Step1 Create a Store
 
+
 2) subscribe to the Store > Command call subscribe
 
 3. Create Reducer and connect to store
 
 4. Dispatch actions
 
+
+
+
+========================================
+React Material:
+
+	https://bit.ly/2GzoLg4
+
+	mail: dsrmurthy786@yahoo.com
+
+Lazy load code:
+		https://bit.ly/2Oa7u2j
+                download zip
+                npm install
+                npm start
+				
+====================================				
