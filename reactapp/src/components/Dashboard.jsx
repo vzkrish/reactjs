@@ -9,6 +9,8 @@ import WeatherComponent from "./lifecycle_hooks/WeatherComponent"
 import FormApp from './formvalidation/FormApp';
 import HOC from "./HOC/HOC"
 
+import ButtonOne from "./HOC/ButtonOne"
+
 // import {MyComponent} from './LodableComponent'
 // Stateful Functional Component
 
@@ -37,6 +39,8 @@ export default class Dashboard extends Component{
                  <FormApp></FormApp>
                   <br/>
                   <HOC></HOC>  
+                  <ButtonOne></ButtonOne>
+                  <ButtonOne disable/>
                 </div>    
             
         )
