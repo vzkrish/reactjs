@@ -1,0 +1,28 @@
+npm install react-router-dom --save
+
+HOC 
+
+======= Post Tea Break Discussion on Redux ============
+
+How do you decide the state Tree. 
+
+create-react-app reduxapp
+
+Create a reduxapp
+
+
+npm install redux --save
+
+Install the redux and save it
+
+
+----------------------
+
+1) Step1 Create a Store
+
+2) subscribe to the Store > Command call subscribe
+
+3. Create Reducer and connect to store
+
+4. Dispatch actions
+
