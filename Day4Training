@@ -1,0 +1,34 @@
+npm install reselector
+
+Allows caching and improving the performance
+
+recompose -- Allows life cycle hooks to SFC
+
+npm install redux
+
+Then install React-redux 
+
+========================================
+
+React Testing
+
+Jest is Test for React
+
+enzyme
+
+Enzyme is used for component testing
+
+
+Load Shallow from enzyme is a mocked browser
+
+
+Snapshot will give entire screen of the compoentn
+
+npm install react-test-renderer --save-dev
+
+npm test -- --coverage
+
+============================================= 
+
+Post Lunch
+
