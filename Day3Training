@@ -43,4 +43,55 @@ Lazy load code:
                 npm install
                 npm start
 				
-====================================				
+================Post Lunch====================
+
+-Dev for only development purposes
+
+npm install redux-logger --save-dev
+
+import logger from "redux-logger"
+
+Use the above for redux logger
+
+
+				
+				
+				
+>> Redux Dev Tools Extension
+npm install redux-devtools-extension --save-dev
+
+
+
+=======================
+Needs this to make async call
+npm install redux-thunk --save
+
+
+Axios Free libraby 
+
+npm install axious --save
+
+For asyn call to the store.
+
+
+
+===================After calling Store using axios=======================
+1. Store
+	Under stand Initial Stage
+2. Define the Reducers how many we need.
+	Trainer List Reducer & Second one is Triner Details. 
+	It is imp to combine
+3. Actions
+	One action is enough. - Trainer Clicked
+4. Middleware
+	1. Redux logger
+	2. Composed with devtools. 
+	
+5. We connect react with redux using Providers
+	We need two contianers 
+	
+	
+========= Now install react-redux component ================
+We need this to get a provider to connect redux with react
+
+Components & Libraies 
